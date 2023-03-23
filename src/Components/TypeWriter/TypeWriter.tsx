@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 
 interface IProps {
-  text: string;
+  textList: string[];
 }
 
-const TypeWriter: React.FC<IProps> = ({ text }) => {
+const TypeWriter: React.FC<IProps> = ({ textList }) => {
+  const [curText, setCurText] = useState<string>("");
   return (
     <div className="
     text-4xl 
@@ -15,7 +16,7 @@ const TypeWriter: React.FC<IProps> = ({ text }) => {
     border-r-2 
     border-solid 
     divide-black">
-      {text}
+      {curText}
     </div>
   )
 }

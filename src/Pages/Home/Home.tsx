@@ -1,16 +1,16 @@
 import React from "react";
-import { Header, TypeWriter } from "@src/Components";
+import { Header, TypeWriter, Slider } from "@src/Components";
+
+const text = ["I'm Kang Seohyeon", "Front End Developer",]
 
 const Home: React.FC = () => {
   return (
     <div className="container my-0 mx-auto pt-16">
       <Header />
       <TypeWriter
-        text={"Hello World!"}
+        textList={text}
       />
-      <h1 className="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+      <Slider />
     </div>
   )
 }
