@@ -25,6 +25,31 @@
   */
 @tailwind variants;
 
+@layer base {
+  @font-face {
+    font-family: "CourierPrime";
+    font-weight: 900;
+    src: font-url("./Fonts/Courier Prime Bold.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "CourierPrime";
+    font-weight: 400;
+    src: font-url("./Fonts/Courier Prime.ttf") format("truetype");
+  }
+  @font-face {
+    font-family: "IBMPlexMono";
+    font-weight: 900;
+    src: font-url("./Fonts/IBMPlexMono-Bold.ttf") format("truetype");
+  }
+  * {
+    @apply font-sans;
+  }
+}
+
 * {
+  font-family: CourierPrime, sans-serif;
   font-size: 16px;
+  font-weight: 400;
+  background-color: #000;
+  color: #fff;
 }

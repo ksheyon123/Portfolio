@@ -2,6 +2,9 @@
 module.exports = {
   content: ["./index.html", "./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
+    fontFamily: {
+      sans: ["CourierPrime", "sans-serif"],
+    },
     // screens: {
     //   sm: "375px",
     //   md: "640px",
@@ -11,7 +14,7 @@ module.exports = {
     extend: {
       animation: {
         typing:
-          "typing 6s steps(44) 500ms 1 normal both, blinkTextCursor 500ms steps(44) infinite normal",
+          "typing 5s steps(44) 500ms infinite normal both, blinkTextCursor 500ms steps(44) infinite normal",
       },
       keyframes: {
         typing: {

@@ -12,18 +12,18 @@ const Box: React.FC = ({
   )
 }
 
-const text = ["I'm Kang Seohyeon", "Front End Developer",]
+const text = ["Hello! I'm Kang Seohyeon", "Front End Developer",]
 
 const Home: React.FC = () => {
   return (
-    <div className="my-0 mx-auto pt-16">
+    <div className="container my-0 mx-auto pt-20">
       <Header />
-      <TypeWriter
-        textList={text}
-      />
+
       <div className="border-solid border border-stone-600 w-full h-80">
         <div>
-          Parallax...
+          <TypeWriter
+            textList={text}
+          />
         </div>
       </div>
       <div className="w-full h-10 text-center border-solid border border-stone-600">
