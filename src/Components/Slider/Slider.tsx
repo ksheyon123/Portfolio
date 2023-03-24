@@ -7,7 +7,7 @@ interface IProps {
 const Slider: React.FC = () => {
 
   return (
-    <div className="container my-0 mx-auto">
+    <div className="my-0 mx-auto border-solid border border-stone-600">
       <div className="w-full h-48 relative rounded-md">
         <div className="absolute top-0 right-0 w-40 h-full">
 

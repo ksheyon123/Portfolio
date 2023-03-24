@@ -2,7 +2,7 @@ import React from "react";
 
 const Header: React.FC = () => {
   return (
-    <div className="container fixed top-0">
+    <div className="w-full fixed top-0 border-solid border border-stone-600">
       <div className="w-full h-16 flex justify-between items-center">
         <div className="flex">
           <div className="rounded-full w-20 h-20">
