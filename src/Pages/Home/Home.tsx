@@ -1,5 +1,5 @@
 import React from "react";
-import { Header, TypeWriter, Slider, Footer, BackgroundWord } from "@src/Components";
+import { LNB, TypeWriter, Slider, Footer, BackgroundWord } from "@src/Components";
 
 const Box: React.FC = ({
   width = "w-full",
@@ -16,8 +16,8 @@ const text = ["Hello! I'm Kang Seohyeon", "Front End Developer",]
 
 const Home: React.FC = () => {
   return (
-    <div className="container my-0 mx-auto pt-20">
-      <Header />
+    <div className="w-screen h-screen">
+      <LNB />
       <div className="border-solid border border-stone-600 w-full h-80">
         <div>
           <TypeWriter
