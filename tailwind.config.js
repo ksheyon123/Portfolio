@@ -6,10 +6,11 @@ module.exports = {
       sans: ["CourierPrime", "sans-serif"],
     },
     screens: {
-      sm: "375px",
-      md: "640px",
-      lg: "960px",
-      xl: "100vw",
+      sm: { min: "0px", max: "375px" },
+      md: { min: "375px", max: "640px" },
+      lg: { min: "640px", max: "960px" },
+      xl: { min: "960px", max: "1200px" },
+      "2xl": { min: "1200px", max: "100vw" },
     },
     extend: {
       animation: {

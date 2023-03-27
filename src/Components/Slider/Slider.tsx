@@ -12,12 +12,12 @@ const Slider: React.FC = () => {
     <div className="w-full my-0 mx-auto border-solid border border-stone-600">
       <div className="w-full h-48 relative rounded-md overflow-hidden">
         <div
-          className="absolute block sm:hidden lg md top-0 left-0 w-40 h-full cursor-pointer"
+          className="absolute sm:hidden lg:block md:hidden top-0 left-0 w-40 h-full cursor-pointer"
           onClick={() => { }}
         >
           Prev
         </div>
-        <div className="w-full h-full  sm:px-0 lg:px-40 md:px-40">
+        <div className="w-full h-full sm:px-0 lg:px-40 md:px-0">
           <div className="flex sm:flex-col overflow-hidden w-120 h-full">
             {items.map((el) => {
               return (
@@ -29,7 +29,7 @@ const Slider: React.FC = () => {
           </div>
         </div>
         <div
-          className="absolute block sm:hidden lg md top-0 right-0 w-40 h-full cursor-pointer"
+          className="absolute block sm:hidden lg:block md:hidden top-0 right-0 w-40 h-full cursor-pointer"
           onClick={() => { }}
         >
           Next
