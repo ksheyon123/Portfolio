@@ -5,12 +5,12 @@ module.exports = {
     fontFamily: {
       sans: ["CourierPrime", "sans-serif"],
     },
-    // screens: {
-    //   sm: "375px",
-    //   md: "640px",
-    //   lg: "960px",
-    //   xl: "100vw",
-    // },
+    screens: {
+      sm: "375px",
+      md: "640px",
+      lg: "960px",
+      xl: "100vw",
+    },
     extend: {
       animation: {
         typing:
