@@ -14,7 +14,7 @@ module.exports = {
     extend: {
       animation: {
         typing:
-          "typing 5s steps(44) 500ms infinite normal both, blinkTextCursor 500ms steps(44) infinite normal",
+          "typing 5s steps(28) 500ms infinite normal both, blinkTextCursor 500ms steps(44) infinite normal",
       },
       keyframes: {
         typing: {
