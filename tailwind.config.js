@@ -15,7 +15,7 @@ module.exports = {
     extend: {
       animation: {
         typing:
-          "typing 5s steps(28) 500ms infinite normal both, blinkTextCursor 500ms steps(44) infinite normal",
+          "typing 5s steps(60) infinite normal both, blinkTextCursor 500ms steps(60) infinite normal",
       },
       keyframes: {
         typing: {
@@ -23,8 +23,8 @@ module.exports = {
           to: { width: "100%" },
         },
         blinkTextCursor: {
-          "0%, 100% ": { "border-right-color": "rgba(0, 0, 0, 0)" },
-          "50%": { "border-color": "rgba(255, 255, 255, 0)" },
+          "0%, 100% ": { "border-right-color": "rgba(0, 0, 0, 1)" },
+          "50%": { "border-color": "rgba(255, 255, 255, 1)" },
         },
       },
     },

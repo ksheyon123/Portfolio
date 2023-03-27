@@ -30,14 +30,17 @@ const Home: React.FC = () => {
           <div>
             Something...
           </div>
-          <div className="relative">
-            <BackgroundWord word={"ABOUT"} />
-          </div>
+
         </div>
       </div>
       <div className="w-full h-80 border-solid border border-stone-600">
-        <div>
-          Something...
+        <div className="flex">
+          <div className="h-full w-1/4">
+            Something...
+          </div>
+          <div className="w-3/4 h-full">
+            <BackgroundWord word={"ABOUT"} />
+          </div>
         </div>
       </div>
       <div className="w-full h-80 border-solid border border-stone-600">

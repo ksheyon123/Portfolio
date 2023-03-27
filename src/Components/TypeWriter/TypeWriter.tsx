@@ -5,15 +5,14 @@ interface IProps {
 }
 
 const TypeWriter: React.FC<IProps> = ({ textList }) => {
-  const [curText, setCurText] = useState<string>("");
+  const [curText, setCurText] = useState<string>(textList[0]);
   useEffect(() => {
     const len = textList.length;
-    let idx = 0;
+    let idx = 1;
     const intervalId = setInterval(() => {
-      if (idx > len - 1) {
-        idx = 0;
-      }
-      setCurText(textList[idx]);
+      console.log(idx % len);
+
+      setCurText(textList[idx % len]);
       idx++;
     }, 5000);
     return () => clearInterval(intervalId);
@@ -28,7 +27,7 @@ const TypeWriter: React.FC<IProps> = ({ textList }) => {
     whitespace-nowrap 
     border-r-2 
     border-solid 
-    divide-black">
+    divide-black w-auto">
       {curText}
     </div>
   )
