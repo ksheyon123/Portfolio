@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { LNB, TypeWriter, Slider, Footer, BackgroundWord } from "@src/Components";
 
 const Box: React.FC = ({
@@ -12,13 +12,39 @@ const Box: React.FC = ({
   )
 }
 
-const text = ["Hello! I'm Kang Seohyeon", "Front End Developer",]
+const text = ["Hello! I'm Kang Seohyeon", "Front End Developer"]
 
 const Home: React.FC = () => {
+  const onScroll = (e: any) => {
+    const _event = e.currentTarget as HTMLDivElement;
+    // Scroll Height : Total Scrollable area height;
+    console.log(_event.scrollHeight);
+    e.target.scrollTop = 800;
+
+  }
+
   return (
-    <div className="w-screen h-screen">
-      <LNB />
-      <div className="border-solid border border-stone-600 w-full h-80">
+    <div className="flex w-screen h-screen">
+      <div className="w-20 h-screen">
+        <LNB />
+      </div>
+      <div className="w-[calc(100%-80px)] h-screen overflow-hidden relative">
+        <div
+          onScroll={onScroll}
+          className="w-full h-full overflow-scroll">
+          <div className="w-full h-full">
+
+          </div>
+          <div className="w-full h-full">
+
+          </div>
+          <div className="w-full h-full">
+
+          </div>
+        </div>
+        <BackgroundWord word={"ABOUT"} />
+      </div>
+      {/* <div className="border-solid border border-stone-600 w-full h-80">
         <div>
           <TypeWriter
             textList={text}
@@ -30,7 +56,6 @@ const Home: React.FC = () => {
           <div>
             Something...
           </div>
-
         </div>
       </div>
       <div className="w-full h-80 border-solid border border-stone-600">
@@ -39,7 +64,7 @@ const Home: React.FC = () => {
             Something...
           </div>
           <div className="w-3/4 h-full">
-            <BackgroundWord word={"ABOUT"} />
+
           </div>
         </div>
       </div>
@@ -47,9 +72,9 @@ const Home: React.FC = () => {
         <div>
           Something...
         </div>
-      </div>
-      <Slider />
-      <Footer />
+      </div> */}
+      {/* <Slider />
+      <Footer /> */}
     </div>
   )
 }

@@ -3,7 +3,7 @@ import { PAGES } from "@src/Constants/index";
 
 const LNB: React.FC = () => {
   return (
-    <div className="w-20 h-full flex items-center justify-center">
+    <div className="w-full h-full flex items-center justify-center">
       <div>
         {PAGES.map(el => {
           return (
