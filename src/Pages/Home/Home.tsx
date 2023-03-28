@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState, useCallback } from "react";
 import { LNB, TypeWriter, Slider, Footer, BackgroundWord } from "@src/Components";
 
 const Box: React.FC = ({
@@ -15,13 +15,20 @@ const Box: React.FC = ({
 const text = ["Hello! I'm Kang Seohyeon", "Front End Developer"]
 
 const Home: React.FC = () => {
-  const onScroll = (e: any) => {
+  const [pageIdx, setPageIdx] = useState<number>(1);
+  const onScroll = useCallback((e: any) => {
     const _event = e.currentTarget as HTMLDivElement;
-    // Scroll Height : Total Scrollable area height;
-    console.log(_event.scrollHeight);
-    e.target.scrollTop = 800;
+    const curPositionY = _event.scrollTop;
+    const viewY = _event.clientHeight;
+    // scrollHeight : Total Scrollable area height;
+    // scrollTop : Current Top y position;
+    // clientHeight : current window height
 
-  }
+    if (curPositionY > viewY * (pageIdx - 1) + 100) {
+      setPageIdx(prev => prev + 1);
+      e.target.scrollTop = viewY * pageIdx;
+    }
+  }, [pageIdx]);
 
   return (
     <div className="flex w-screen h-screen">
@@ -33,13 +40,13 @@ const Home: React.FC = () => {
           onScroll={onScroll}
           className="w-full h-full overflow-scroll">
           <div className="w-full h-full">
-
+            Slide 1
           </div>
           <div className="w-full h-full">
-
+            Slide 2
           </div>
           <div className="w-full h-full">
-
+            Slide 3
           </div>
         </div>
         <BackgroundWord word={"ABOUT"} />
