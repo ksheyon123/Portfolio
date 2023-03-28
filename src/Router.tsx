@@ -6,8 +6,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element:
-      <AnimatedRoutes>
-      </AnimatedRoutes>,
+      <AnimatedRoutes />,
     children: [
       {
         path: "home",
