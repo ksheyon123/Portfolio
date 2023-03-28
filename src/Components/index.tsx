@@ -5,3 +5,4 @@ export { Footer } from "@src/Components/Footer/Footer";
 export { Wrapper } from "@src/Components/Wrapper/Wrapper";
 export { BackgroundWord } from "@src/Components/BackgroundWord";
 export { LNB } from "@src/Components/LNB/LNB";
+export { Layout } from "@src/Components/Layout";

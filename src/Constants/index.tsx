@@ -3,6 +3,6 @@ const PAGES = [
   "Job",
   "Work",
   "Contact"
-]
+];
 
 export { PAGES }

@@ -31,26 +31,8 @@ const Home: React.FC = () => {
   }, [pageIdx]);
 
   return (
-    <div className="flex w-screen h-screen">
-      <div className="w-20 h-screen">
-        <LNB />
-      </div>
-      <div className="w-[calc(100%-80px)] h-screen overflow-hidden relative">
-        <div
-          onScroll={onScroll}
-          className="w-full h-full overflow-scroll">
-          <div className="w-full h-full">
-            Slide 1
-          </div>
-          <div className="w-full h-full">
-            Slide 2
-          </div>
-          <div className="w-full h-full">
-            Slide 3
-          </div>
-        </div>
-        <BackgroundWord word={"ABOUT"} />
-      </div>
+    <div className="w-full h-full">
+      Home
       {/* <div className="border-solid border border-stone-600 w-full h-80">
         <div>
           <TypeWriter
