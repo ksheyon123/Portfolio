@@ -1,14 +1,19 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import { AnimatePresence } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 const AnimatedRoutes: React.FC = () => {
   return (
-    <div className="animated w-full h-full">
-      <AnimatePresence>
+    <AnimatePresence>
+      <motion.div
+        className="w-full h-full"
+        initial={{ x: 300, opacity: 0 }}
+        animate={{ x: 0, opacity: 1 }}
+        exit={{ x: -300, opacity: 0 }}
+      >
         <Outlet />
-      </AnimatePresence>
-    </div>
+      </motion.div>
+    </AnimatePresence>
   )
 }
 

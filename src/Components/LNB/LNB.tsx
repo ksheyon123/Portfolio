@@ -1,24 +1,24 @@
 import React from "react";
-import { useNavigate, useLocation } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
+import { useUrlPathname } from "@src/Hooks/useUrlPathname";
 import { PAGES } from "@src/Constants/index";
 
 const LNB: React.FC = () => {
   const navigate = useNavigate();
-  const { pathname } = useLocation();
-  const path = pathname.replace("/", "");
+  const { path } = useUrlPathname();
   return (
     <div className="w-full h-full flex items-center justify-center">
-      <div>
+      <div className="flex flex-col">
         {PAGES.map(link => {
           const lower = link.toLowerCase();
           return (
-            <div
+            <Link
               key={lower}
               className={`text-sm  mb-2 last:mb-0 ${path === lower ? "text-white" : "text-gray-400"}`}
-              onClick={() => { navigate(`/${lower}`) }}
+              to={`/${lower}`}
             >
               {link}
-            </div>
+            </Link>
           )
         })}
       </div>

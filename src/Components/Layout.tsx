@@ -16,7 +16,7 @@ const Layout: React.FC<IProps> = ({ children }) => {
         <div className="w-[calc(100%-80px)] h-screen overflow-hidden relative">
           {children}
           <BackgroundWord
-            word={"ABOUT"}
+
           />
         </div>
       </div>

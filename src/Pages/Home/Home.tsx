@@ -31,7 +31,7 @@ const Home: React.FC = () => {
   }, [pageIdx]);
 
   return (
-    <div className="w-full h-full">
+    <div className="w-full h-full bg-amber-400">
       Home
       {/* <div className="border-solid border border-stone-600 w-full h-80">
         <div>
