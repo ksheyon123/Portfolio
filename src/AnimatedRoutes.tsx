@@ -1,19 +1,17 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
-import { AnimatePresence, motion } from "framer-motion";
+import { useOutlet, useLocation } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
+import { Layout } from "@src/Components";
 
 const AnimatedRoutes: React.FC = () => {
+  const { pathname } = useLocation();
+  const element = useOutlet();
   return (
-    <AnimatePresence>
-      <motion.div
-        className="w-full h-full"
-        initial={{ x: 300, opacity: 0 }}
-        animate={{ x: 0, opacity: 1 }}
-        exit={{ x: -300, opacity: 0 }}
-      >
-        <Outlet />
-      </motion.div>
-    </AnimatePresence>
+    <Layout>
+      <AnimatePresence mode="wait">
+        {element && React.cloneElement(element, { key: pathname })}
+      </AnimatePresence>
+    </Layout>
   )
 }
 

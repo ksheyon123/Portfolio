@@ -1,5 +1,6 @@
 import React, { ReactNode } from "react";
 import { Outlet } from "react-router-dom";
+import { AnimatedRoutes } from "@src/AnimatedRoutes";
 import { LNB, BackgroundWord } from "@src/Components";
 
 interface IProps {
@@ -15,9 +16,7 @@ const Layout: React.FC<IProps> = ({ children }) => {
         </div>
         <div className="w-[calc(100%-80px)] h-screen overflow-hidden relative">
           {children}
-          <BackgroundWord
-
-          />
+          <BackgroundWord />
         </div>
       </div>
     </div>

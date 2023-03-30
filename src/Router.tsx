@@ -1,23 +1,34 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Home, Job } from "@src/Pages/";
-import { Layout } from "@src/Components";
 import { AnimatedRoutes } from "./AnimatedRoutes";
+import { AnimatedWrapper } from "./AnimatedWrapper";
 
 const router = createBrowserRouter([
   {
-    path: "/",
     element:
-      <Layout>
-        <AnimatedRoutes />
-      </Layout>,
+      <AnimatedRoutes />,
     children: [
       {
+        index: true,
         path: "home",
-        element: <Home />
+        element:
+          <AnimatedWrapper>
+            <Home />
+          </AnimatedWrapper>
       },
       {
         path: "job",
-        element: <Job />
+        element:
+          <AnimatedWrapper>
+            <Job />
+          </AnimatedWrapper>
+      },
+      {
+        path: "work",
+        element:
+          <AnimatedWrapper>
+            <Job />
+          </AnimatedWrapper>
       }
     ]
   },
