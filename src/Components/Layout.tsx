@@ -1,4 +1,5 @@
 import React, { ReactNode } from "react";
+import { Outlet } from "react-router-dom";
 import { LNB, BackgroundWord } from "@src/Components";
 
 interface IProps {

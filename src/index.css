@@ -53,3 +53,7 @@
   background-color: #000;
   color: #fff;
 }
+
+.active:text-slate-500 {
+  text-color: red;
+}

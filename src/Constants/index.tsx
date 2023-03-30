@@ -1,5 +1,5 @@
 const PAGES = [
-  "About",
+  "Home",
   "Job",
   "Work",
   "Contact"

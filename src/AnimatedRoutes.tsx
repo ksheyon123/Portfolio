@@ -1,11 +1,13 @@
 import React from "react";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet } from "react-router-dom";
+import { AnimatePresence } from "framer-motion";
 
 const AnimatedRoutes: React.FC = () => {
-  const navigate = useNavigate();
   return (
     <div className="animated w-full h-full">
-      <Outlet />
+      <AnimatePresence>
+        <Outlet />
+      </AnimatePresence>
     </div>
   )
 }
