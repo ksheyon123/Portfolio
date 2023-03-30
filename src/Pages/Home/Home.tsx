@@ -33,6 +33,7 @@ const Home: React.FC = () => {
   return (
     <div className="w-full h-full">
       Home
+      <TypeWriter />
     </div>
   )
 }

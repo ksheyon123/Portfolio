@@ -1,34 +1,39 @@
 import React, { useEffect, useState } from "react";
 
 interface IProps {
-  textList: string[];
 }
 
-const TypeWriter: React.FC<IProps> = ({ textList }) => {
-  const [curText, setCurText] = useState<string>(textList[0]);
-  useEffect(() => {
-    const len = textList.length;
-    let idx = 1;
-    const intervalId = setInterval(() => {
-      console.log(idx % len);
+const TypeWriter: React.FC<IProps> = () => {
 
-      setCurText(textList[idx % len]);
+  const [text, setText] = useState<string>('');
+
+  useEffect(() => {
+    const initialText = "Hello World! I'm web developer!";
+    const len = initialText.length;
+    let idx = 0;
+
+    const timerId = setInterval(() => {
+      if (idx === len) {
+        clearInterval(timerId)
+      }
+      setText(prev => {
+        return prev + initialText.slice(idx, idx + 1);
+      });
       idx++;
-    }, 5000);
-    return () => clearInterval(intervalId);
-  }, [textList]);
+    }, 100);
+
+    return () => clearInterval(timerId);
+  }, []);
 
   return (
     <div className="
     text-4xl 
-    animate-typing 
-    animate-blinkcaret 
     overflow-hidden 
     whitespace-nowrap 
     border-r-2 
     border-solid 
     divide-black w-auto">
-      {curText}
+      {text}
     </div>
   )
 }
