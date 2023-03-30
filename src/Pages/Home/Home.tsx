@@ -31,39 +31,8 @@ const Home: React.FC = () => {
   }, [pageIdx]);
 
   return (
-    <div className="w-full h-full bg-amber-400">
+    <div className="w-full h-full">
       Home
-      {/* <div className="border-solid border border-stone-600 w-full h-80">
-        <div>
-          <TypeWriter
-            textList={text}
-          />
-        </div>
-      </div>
-      <div className="w-full h-10 text-center border-solid border border-stone-600">
-        <div>
-          <div>
-            Something...
-          </div>
-        </div>
-      </div>
-      <div className="w-full h-80 border-solid border border-stone-600">
-        <div className="flex">
-          <div className="h-full w-1/4">
-            Something...
-          </div>
-          <div className="w-3/4 h-full">
-
-          </div>
-        </div>
-      </div>
-      <div className="w-full h-80 border-solid border border-stone-600">
-        <div>
-          Something...
-        </div>
-      </div> */}
-      {/* <Slider />
-      <Footer /> */}
     </div>
   )
 }

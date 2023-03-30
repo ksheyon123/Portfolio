@@ -1,10 +1,9 @@
 import React from "react";
-import { useNavigate, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useUrlPathname } from "@src/Hooks/useUrlPathname";
 import { PAGES } from "@src/Constants/index";
 
 const LNB: React.FC = () => {
-  const navigate = useNavigate();
   const { path } = useUrlPathname();
   return (
     <div className="w-full h-full flex items-center justify-center">

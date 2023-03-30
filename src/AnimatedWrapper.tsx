@@ -6,19 +6,22 @@ interface IProps {
 const sections = {
   hidden: {
     y: '-100%',
+    opacity: 0.3
   },
   visible: {
     y: 0,
+    opacity: 1,
     transition: {
-      duration: 0.3,
-      ease: 'easeOut',
+      duration: 0.2,
+      ease: 'easeInOut',
     },
   },
   exit: {
     y: '100%',
+    opacity: 0.3,
     transition: {
-      duration: 0.3,
-      ease: 'easeIn',
+      duration: 0.2,
+      ease: 'easeInOut',
     },
   },
 };

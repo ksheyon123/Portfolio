@@ -11,7 +11,7 @@ const Layout: React.FC<IProps> = ({ children }) => {
   return (
     <div className="w-screen h-screen">
       <div className="flex w-full h-full">
-        <div className="w-20 h-full">
+        <div className="w-40 h-full">
           <LNB />
         </div>
         <div className="w-[calc(100%-80px)] h-screen overflow-hidden relative">
