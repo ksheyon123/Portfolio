@@ -15,17 +15,12 @@ module.exports = {
     },
     extend: {
       animation: {
-        typing:
-          "typing 5s steps(60) infinite normal both, blinkTextCursor 500ms steps(60) infinite normal",
+        "blink-cursor": "blink 1s  infinite normal",
       },
       keyframes: {
-        typing: {
-          from: { width: "0px" },
-          to: { width: "100%" },
-        },
-        blinkTextCursor: {
-          "0%, 100% ": { "border-right-color": "rgba(0, 0, 0, 1)" },
-          "50%": { "border-color": "rgba(255, 255, 255, 1)" },
+        blink: {
+          "0%": { "border-right-color": "rgba(0, 0, 0, 0)" },
+          "100%": { "border-color": "rgba(255, 255, 255, 1)" },
         },
       },
     },

@@ -29,10 +29,8 @@ const Home: React.FC = () => {
       e.target.scrollTop = viewY * pageIdx;
     }
   }, [pageIdx]);
-
   return (
     <div className="w-full h-full">
-      Home
       <TypeWriter />
     </div>
   )
