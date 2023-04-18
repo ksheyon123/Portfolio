@@ -5,6 +5,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ["CourierPrime", "sans-serif"],
+      display: ['Oswald'],
     },
     screens: {
       sm: { min: "0px", max: "375px" },

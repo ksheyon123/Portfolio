@@ -25,25 +25,43 @@
   */
 @tailwind variants;
 
-@layer base {
-  @font-face {
+@font-face {
     font-family: "CourierPrime";
     font-weight: 900;
-    src: font-url("./Fonts/Courier Prime Bold.ttf") format("truetype");
+    src: url("./Fonts/Courier Prime Bold.ttf") format("truetype");
   }
   @font-face {
     font-family: "CourierPrime";
     font-weight: 400;
-    src: font-url("./Fonts/Courier Prime.ttf") format("truetype");
+    src: url("./Fonts/Courier Prime.ttf") format("truetype");
   }
   @font-face {
     font-family: "IBMPlexMono";
     font-weight: 900;
-    src: font-url("./Fonts/IBMPlexMono-Bold.ttf") format("truetype");
+    src: url("./Fonts/IBMPlexMono-Bold.ttf") format("truetype");
   }
-  * {
-    @apply font-sans;
+
+  @font-face {
+    font-family: "Oswald";
+    font-weight: 900;
+    src: url("./Fonts/Oswald-Bold.ttf") format("truetype");
   }
+
+  @font-face {
+    font-family: "Oswald";
+    font-weight: 600;
+    src: url("./Fonts/Oswald-Medium.ttf") format("truetype");
+  }
+
+  @font-face {
+    font-family: "Oswald";
+    font-weight: 400;
+    src: url("./Fonts/Oswald-Regular.ttf") format("truetype");
+  }
+
+
+@layer base {
+  
 }
 
 * {
