@@ -9,24 +9,24 @@ const Work: React.FC = () => {
 
       </div>
       <div className="flex items-center justify-center w-1/2 h-full">
-        <div className="">
+        <div className="grid grid-cols-[200px_200px]">
+          <div className="h-24">
+            HAVAH MITTER
+          </div>
           <div>
-            HAVAH Mitter
-        </div>
+            HAVAH PLANET RUNNER
+          </div>
           <div>
-            HAVAH Planet Runner
-        </div>
+            HAVAH EXPLORER
+          </div>
           <div>
-            HAVAH Scan
-        </div>
+            PARTNER CENTER
+          </div>
           <div>
-            Partner Center
-        </div>
+            ZZEUNG
+          </div>
           <div>
-            Zzeung
-        </div>
-          <div>
-            Jeju Safety QR
+            JEJU SAFETY
         </div>
         </div>
       </div>

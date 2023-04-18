@@ -1,3 +1,4 @@
+import { logo_havah } from "@src/assets/project_icon";
 const PAGES = [
   "Home",
   "Job",
@@ -5,4 +6,11 @@ const PAGES = [
   "Contact"
 ];
 
-export { PAGES }
+const PROJECTS = [
+  {
+    name: "HAVAH MITTER",
+    logo: logo_havah
+  }
+]
+
+export { PAGES, PROJECTS }

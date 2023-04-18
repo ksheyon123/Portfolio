@@ -14,6 +14,9 @@ module.exports = {
       "2xl": { min: "1200px", max: "100vw" },
     },
     extend: {
+      gridTemplateRows : {
+        
+      },
       animation: {
         "blink-cursor": "blink 1s  infinite normal",
       },
