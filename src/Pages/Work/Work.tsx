@@ -14,8 +14,13 @@ const Work: React.FC = () => {
           {PROJECTS.map((el) => {
             const { name } = el;
             return (
-              <div className="h-24 text-3xl font-display">
-                {name}
+              <div className="group inline-block h-24 text-3xl font-display cursor-pointer">
+                <div className="inline relative">
+                  <div className="inline group-hover:after:content-[''] group-hover:after:absolute group-hover:after:w-full group-hover:after:h-0.5 group-hover:after:bottom-[-2px] group-hover:after:left-0 group:hover:after:animate-txt-deco-underline group-hover:after:bg-slate-400">
+                    {name}
+                  </div>
+                </div>
+
               </div>
             )
           })}

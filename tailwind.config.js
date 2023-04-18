@@ -20,8 +20,17 @@ module.exports = {
       },
       animation: {
         "blink-cursor": "blink 1s  infinite normal",
+        "txt-deco-underline" : "line 0.25s ease-out infinite"
       },
       keyframes: {
+        line : {
+          "0%" : {
+            transform : "scaleX(0)"
+          },
+          "100%" : {
+            transform : "scaleX(1)"
+          },
+        },
         blink: {
           "0%": { "border-right-color": "rgba(0, 0, 0, 0)" },
           "100%": { "border-color": "rgba(255, 255, 255, 1)" },
