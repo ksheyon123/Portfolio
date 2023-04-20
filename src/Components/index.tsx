@@ -6,4 +6,4 @@ export { Wrapper } from "@src/Components/Wrapper/Wrapper";
 export { BackgroundWord } from "@src/Components/BackgroundWord";
 export { LNB } from "@src/Components/LNB/LNB";
 export { Layout } from "@src/Components/Layout";
-export { WorkDetail } from "@src/Components/WorkDetail";
+export { WorkDetail } from "@src/Components/WorkPage/WorkDetail";

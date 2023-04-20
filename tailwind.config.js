@@ -15,6 +15,9 @@ module.exports = {
       "2xl": { min: "1200px", max: "100vw" },
     },
     extend: {
+      spacing : {
+        420 : "420px"
+      },
       gridTemplateRows : {
         
       },
