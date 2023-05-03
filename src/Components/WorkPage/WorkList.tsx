@@ -11,9 +11,10 @@ const WorkList: React.FC<IProps> = ({ toggler }) => {
       {PROJECTS.map((el) => {
         const { name } = el;
         return (
-          <div className="group inline-block h-24  font-display cursor-pointer" onClick={() => {
-            toggler(el)
-          }}>
+          <div className="group inline-block h-24  font-display cursor-pointer"
+            onClick={() => {
+              toggler(el)
+            }}>
             <div className="inline relative">
               <div className="inline text-3xl group-hover:after:content-[''] group-hover:after:absolute group-hover:after:w-full group-hover:after:h-0.5 group-hover:after:bottom-[-2px] group-hover:after:left-0 group:hover:after:animate-txt-deco-underline group-hover:after:bg-slate-400">
                 {name}

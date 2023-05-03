@@ -3,7 +3,6 @@ import { WorkDetail } from "@src/Components";
 import { WorkContainer } from "@src/Container/WorkContainer/WorkContainer";
 
 const Work: React.FC = () => {
-  const [item, setItem] = useState<any>();
   return (
     <div className="flex w-full h-full justify-between">
       <div className="w-auto h-full">
