@@ -9,8 +9,8 @@ const Work: React.FC = () => {
       <div className="w-auto h-full">
 
       </div>
-      <div className="relative flex items-center justify-center w-420 h-full">
-        <div className="grid grid-cols-[200px_200px] ">
+      <div className="relative flex items-center justify-center w-auto h-full">
+        <div className="grid grid-cols-[auto_auto] gap-5">
           {PROJECTS.map((el) => {
             const { name } = el;
             return (
