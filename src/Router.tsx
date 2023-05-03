@@ -3,7 +3,7 @@ import { Home, Job, Work } from "@src/Pages/";
 import { AnimatedRoutes } from "./AnimatedRoutes";
 import { AnimatedWrapper } from "./AnimatedWrapper";
 
-const router = createBrowserRouter([
+const Router = createBrowserRouter([
   {
     element:
       <AnimatedRoutes />,
@@ -45,4 +45,4 @@ const router = createBrowserRouter([
   }
 ]);
 
-export { router } 
+export { Router } 

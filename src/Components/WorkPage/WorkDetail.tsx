@@ -12,4 +12,4 @@ const WorkDetail: React.FC = () => {
   )
 }
 
-export { WorkDetail }
+export { WorkDetail };

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { PROJECTS } from "@src/Constants";
-import { WorkDetail } from "@src/Components"
+import { WorkDetail } from "@src/Components";
+import { WorkContainer } from "@src/Container/WorkContainer/WorkContainer";
 
 const Work: React.FC = () => {
   const [item, setItem] = useState<any>();
@@ -10,25 +10,7 @@ const Work: React.FC = () => {
 
       </div>
       <div className="relative flex items-center justify-center w-auto h-full">
-        <div className="grid grid-cols-[auto_auto] gap-5">
-          {PROJECTS.map((el) => {
-            const { name } = el;
-            return (
-              <div className="group inline-block h-24  font-display cursor-pointer" onClick={() => {
-                setItem(el)
-              }}>
-                <div className="inline relative">
-                  <div className="inline text-3xl group-hover:after:content-[''] group-hover:after:absolute group-hover:after:w-full group-hover:after:h-0.5 group-hover:after:bottom-[-2px] group-hover:after:left-0 group:hover:after:animate-txt-deco-underline group-hover:after:bg-slate-400">
-                    {name}
-                  </div>
-                </div>
-              </div>
-            )
-          })}
-        </div>
-        {!!item && (
-          <WorkDetail />
-        )}
+        <WorkContainer />
       </div>
     </div>
   )
