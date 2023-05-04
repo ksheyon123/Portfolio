@@ -1,23 +1,23 @@
 import React from "react";
+import { useUrlPathname } from "@src/Hooks/useUrlPathname";
+import { PAGES } from "@src/Constants/index";
 
 const Header: React.FC = () => {
+  const { path } = useUrlPathname();
+
   return (
-    <div className="container w-full fixed top-0 border-solid border border-stone-600">
-      <div className="w-full flex justify-between items-center">
-        <div className="flex">
-          <div className="rounded-full w-20 h-20">
-
-          </div>
-          <div className="text-2xl">
-            Kang Seohyeon
-          </div>
-        </div>
-        <div>
-          <img />
-        </div>
-      </div>
+    <div className="w-full h-full">
+      {PAGES.map(link => {
+        const lower = link.toLowerCase();
+        if (path === lower) {
+          return (
+            <span className="text-sm text-white">
+              {lower}
+            </span>
+          )
+        }
+      })}
     </div>
-
   )
 }
 
