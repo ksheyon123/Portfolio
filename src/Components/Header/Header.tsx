@@ -11,9 +11,9 @@ const Header: React.FC = () => {
         const lower = link.toLowerCase();
         if (path === lower) {
           return (
-            <span className="text-sm text-white">
+            <div className="text-sm text-white">
               {lower}
-            </span>
+            </div>
           )
         }
       })}

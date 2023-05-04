@@ -15,7 +15,7 @@ const WorkContainer: React.FC = () => {
     <>
       <WorkList toggler={toggler} />
       {toggle && (
-        <WorkDetail />
+        <WorkDetail close={() => setToggle(prev => !prev)} />
       )}
     </>
   )

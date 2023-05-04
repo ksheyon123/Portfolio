@@ -6,6 +6,7 @@ import { Layout } from "@src/Components";
 const AnimatedRoutes = () => {
   const { pathname } = useLocation();
   const element = useOutlet();
+
   return (
     <Layout>
       <AnimatePresence mode="wait">
