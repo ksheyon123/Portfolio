@@ -1,39 +1,32 @@
 import React, { ReactNode, useEffect, useRef, RefObject } from "react";
 import { LNB, BackgroundWord, Header } from "@src/Components";
+import { useSwiper } from "@src/Hooks/useSwiper";
 
 interface IProps {
   children: ReactNode;
 }
 
 const Layout: React.FC<IProps> = ({ children }) => {
+  const {
+    handleTouchEnd,
+    handleTouchMove,
+    handleTouchStart
+  } = useSwiper();
   const divEl = useRef<HTMLDivElement>();
-
-  const touchStart = (e: TouchEvent) => {
-    console.log("touch start", e);
-  }
-
-  const touchMove = (e: TouchEvent) => {
-    console.log("touch move", e);
-
-  }
-
-  const touchEnd = (e: TouchEvent) => {
-    console.log("touch End", e);
-  }
 
   useEffect(() => {
     const { current } = divEl;
     if (current) {
-      current.addEventListener("touchstart", touchStart);
-      current.addEventListener("touchmove", touchMove);
-      current.addEventListener("touchend", touchEnd);
+      current.addEventListener("touchstart", handleTouchStart);
+      current.addEventListener("touchmove", handleTouchMove);
+      current.addEventListener("touchend", handleTouchEnd);
       return () => {
-        current.removeEventListener("touchstart", touchStart);
-        current.addEventListener("touchmove", touchMove);
-        current.removeEventListener("touchend", touchEnd);
+        current.removeEventListener("touchstart", handleTouchStart);
+        current.addEventListener("touchmove", handleTouchMove);
+        current.removeEventListener("touchend", handleTouchEnd);
       }
     }
-  }, [divEl]);
+  }, []);
 
   return (
     <div className="w-screen h-screen">

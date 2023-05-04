@@ -31,7 +31,7 @@ const Home: React.FC = () => {
   }, [pageIdx]);
   return (
     <div className="w-full h-full">
-      <TypeWriter />
+      {/* <TypeWriter /> */}
     </div>
   )
 }

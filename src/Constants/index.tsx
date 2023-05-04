@@ -4,6 +4,7 @@ import {
   logo_myid_s,
   logo_zzeung_s
 } from "@src/assets/project_icon";
+
 const PAGES = [
   "Home",
   "Job",
