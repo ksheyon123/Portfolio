@@ -1,4 +1,4 @@
-import React, { ReactNode, useEffect, useRef, RefObject } from "react";
+import React, { ReactNode, useEffect, useRef, RefObject, useState, useCallback } from "react";
 import { LNB, BackgroundWord, Header } from "@src/Components";
 import { useSwiper } from "@src/Hooks/useSwiper";
 
@@ -7,23 +7,58 @@ interface IProps {
 }
 
 const Layout: React.FC<IProps> = ({ children }) => {
-  const {
-    handleTouchEnd,
-    handleTouchMove,
-    handleTouchStart
-  } = useSwiper();
+  // const {
+  //   handleTouchEnd,
+  //   handleTouchMove,
+  //   handleTouchStart
+  // } = useSwiper();
   const divEl = useRef<HTMLDivElement>();
+  const [touchStart, setTouchStart] = useState<number>(0);
+  const [touchEnd, setTouchEnd] = useState<number>(0);
+  const [isTouched, setIsTouched] = useState<boolean>(false);
+
+  const handleTouchStart = (e: TouchEvent) => {
+    setIsTouched(prev => !prev);
+    setTouchStart(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  };
+
+  const handleTouchEnd = useCallback(() => {
+    console.log("touchStart : ", touchEnd - touchStart)
+    if (touchEnd - touchStart > 150) {
+      // do your stuff here for left swipe
+      console.log("Swipe Right")
+    }
+
+    if (touchEnd - touchStart < -150) {
+      // do your stuff here for right swipe
+      console.log("Swipe Left")
+    }
+    setIsTouched(prev => !prev);
+  }, [touchEnd, touchStart]);
+
+  useEffect(() => {
+    const { current } = divEl;
+    if (isTouched && current) {
+      current.addEventListener("touchmove", handleTouchMove);
+      current.addEventListener("touchend", handleTouchEnd);
+
+      return () => {
+        current.addEventListener("touchmove", handleTouchMove);
+        current.removeEventListener("touchend", handleTouchEnd);
+      }
+    }
+  }, [touchEnd, touchStart]);
 
   useEffect(() => {
     const { current } = divEl;
     if (current) {
       current.addEventListener("touchstart", handleTouchStart);
-      current.addEventListener("touchmove", handleTouchMove);
-      current.addEventListener("touchend", handleTouchEnd);
       return () => {
         current.removeEventListener("touchstart", handleTouchStart);
-        current.addEventListener("touchmove", handleTouchMove);
-        current.removeEventListener("touchend", handleTouchEnd);
       }
     }
   }, []);
